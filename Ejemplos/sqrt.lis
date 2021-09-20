@@ -1,3 +1,7 @@
+n = 25;
+i = 0;
+t = 0; 
 repeat {
-  a = 1
-} until (t == n, muerte && yo == equisde, a = b = 3) 
+  i = i + 1; 
+  t = i * i
+  } until (t == n) 

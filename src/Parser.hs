@@ -112,7 +112,7 @@ comm :: Parser Comm
 comm = chainl1 comm2 (reservedOp lis ";" >> return Seq)
 
 comm2 :: Parser Comm
-comm2 = ifStatement <|> repeatStatement <|> assignmentStatement
+comm2 = ifStatement <|> repeatStatement <|> (reserved lis "skip" >> return Skip) <|> assignmentStatement
 
 ifStatement :: Parser Comm
 ifStatement = do
